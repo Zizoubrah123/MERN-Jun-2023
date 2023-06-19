@@ -1,14 +1,12 @@
-
-class Deck {
-  constructor() {
-    const suits = ['Diamond', 'Heart', 'Spade', 'Club'];
-    const faces = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
-    const deck = [];
-    suits.forEach(suit => {
-      faces.forEach(face => {
-        deck.push(this.createCard(suit, face));
-        console.log(deck);
-      });
-    });
-  }
+function getFee(isMember) {
+  return (isMember ? '$2.00' : '$10.00');
 }
+
+console.log(getFee(true));
+// Expected output: "$2.00"
+
+console.log(getFee(false));
+// Expected output: "$10.00"
+
+console.log(getFee(null));
+// Expected output: "$10.00"
