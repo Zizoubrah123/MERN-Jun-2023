@@ -1,0 +1,40 @@
+.header{
+  width: 95%;
+  height: 150px;
+  background-color: green;
+  margin-top: 50px;
+  margin: auto;
+}
+
+.navigate {
+  background-color: aqua;
+  width: 15%;
+  margin: 30px;
+  margin-left: 50px;
+  height: 500px;
+}
+
+.main {
+  background-color: red ;
+  width: 70%;
+  height: 600px;
+    margin: 30px;
+
+}
+
+.mainFlex{
+  display:flex ;
+
+}
+
+.sub{
+  background-color: yellow;
+  width: 27%;
+  height: 300px;
+}
+
+.advert{
+  background-color: rebeccapurple;
+  width: 90%;
+  height: 200px;
+}
