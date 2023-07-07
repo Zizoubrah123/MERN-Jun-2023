@@ -20,8 +20,9 @@ const nav = useNavigate()
         })
         .then((response)=>{
         console.log(response.data)
-        
-        nav("/")
+        setTitle(response.data.product.title)
+        SetPrice(response.data.product.price)
+        SetDescription(response.data.product.description)
         })
         .catch((err)=>{
             console.log("❌❌❌ Something Went Wrong", err);
@@ -32,15 +33,15 @@ const nav = useNavigate()
         <form onSubmit={onSubmitHandler}>
             <p>
             <label>title:</label><br />
-            <input type="text" onChange={e=>setTitle(e.target.value)} />
+            <input type="text" onChange={e=>setTitle(e.target.value)} value={title} />
             </p>
             <p>
                 <label>Price:</label><br />
-                <input type="number"onChange={e=>SetPrice(e.target.value)} />
+                <input type="number"onChange={e=>SetPrice(e.target.value)} value={price} />
             </p>
             <p>
                 <label>Description:</label><br />
-                <input type="text"onChange={e=>SetDescription(e.target.value)} />
+                <input type="text"onChange={e=>SetDescription(e.target.value)} value={description} />
             </p>
             <input type="submit" />
         </form>
