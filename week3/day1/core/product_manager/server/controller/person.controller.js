@@ -5,7 +5,7 @@ module.exports.index = (request, response) => {
     });
 }
     // The method below is new
-module.exports.createPerson = (request, response) => {
+module.exports.create = (request, response) => {
     const { title, price, description } = request.body;
     Person.create({
         title,
@@ -14,4 +14,16 @@ module.exports.createPerson = (request, response) => {
     })
         .then(person => response.json(person))
         .catch(err => response.json(err));
+}
+
+module.exports.getAllproducts = (request, response) => {
+    Person.find()
+        .then(persons => response.json(persons))
+        .catch(err => response.json(err))
+}
+
+module.exports.getOne = (request, response) => {
+    Person.findOne({_id:request.params.id})
+        .then(person => response.json(person))
+        .catch(err => response.json(err))
 }

@@ -13,7 +13,7 @@ const nav = useNavigate()
     const onSubmitHandler = e => {
         e.preventDefault();
         
-        axios.post('http://localhost:8000/api/people/new', {
+        axios.post('http://localhost:8000/api/product/new', {
             title,
             price,
             description
@@ -31,7 +31,7 @@ const nav = useNavigate()
     return ( 
         <form onSubmit={onSubmitHandler}>
             <p>
-            <label>First name:</label><br />
+            <label>title:</label><br />
             <input type="text" onChange={e=>setTitle(e.target.value)} />
             </p>
             <p>
