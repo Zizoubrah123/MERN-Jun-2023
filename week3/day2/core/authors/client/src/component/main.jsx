@@ -29,9 +29,7 @@ const Main = (props) => {
             })
             .catch(err => console.error(err));
     }
-    const myData = author.state.contacts
-    .sort((a, b) => a.author.localeCompare(b.author))
-    .map((item, i) => <List key={i} data={item} />);
+
   return (
     <>
     <h1>favorite authors</h1>
